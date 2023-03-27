@@ -9,17 +9,17 @@
 <body>
     <script>
 
-        
-
         function getComputerChoice(){
 
             let computerChoice=['Rock','Paper','Scissors'];
+
             let randIndex = Math.floor(Math.random() * computerChoice.length);
+
             return computerChoice[randIndex];
         }
 
 
-        function playRound(playerSelection, computerSelection){
+        function playRound(){
 
             
             playerSelection = prompt().toLowerCase();
@@ -29,36 +29,114 @@
 
             if (playerSelection === 'rock' && computerSelection === 'scissors'){
 
-                alert ('You Win! Rock beats Scissors');
+                return result = 'You Win! Rock beats Scissors';
 
             } else if (playerSelection === 'scissors' && computerSelection === 'rock'){
 
-            alert ('You Lose! Rock beats Scissors');
+                return result = 'You Lose! Rock beats Scissors';
 
             } else if (playerSelection === 'paper' && computerSelection === 'scissors'){
 
-                alert ('You Lose! Scissors beat Paper');
+                return result = 'You Lose! Scissors beat Paper';
 
             } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
 
-                alert ('You Win! Scissors beat Paper');
+                return result = 'You Win! Scissors beat Paper';
 
             } else if (playerSelection === 'rock' && computerSelection === 'paper'){
 
-                alert ('You Lose! Paper beats Rock');
+                return result = 'You Lose! Paper beats Rock';
 
             } else if (playerSelection === 'paper' && computerSelection === 'rock'){
 
-                alert ('You Win! Paper beats Rock');
+                return result = 'You Win! Paper beats Rock';
             } else {
 
-                alert ('Tie');
+                return result = 'Tie';
             }
 
-            return playerSelection, computerSelection;
+        }      
+    
+
+        function game(){
+
+
+            let win = 0
+
+            let loss = 0
+
+            playRound();
+
+                if (result.includes('Win')){ 
+    
+                    win += 1;
+    
+
+                } else {
+
+                    loss += 1
+
+                }
+
+            playRound();
+
+                if (result.includes('Win')){ 
+    
+                    win += 1;
+
+                } else {
+
+                    loss += 1
+
+                }    
+
+            playRound();
+
+                if (result.includes('Win')){ 
+    
+                    win += 1;
+
+                } else {
+
+                    loss += 1
+
+                }
+
+            playRound();
+
+                if (result.includes('Win')){ 
+    
+                    win += 1;
+
+
+                } else {
+
+                    loss += 1
+
+                }    
+
+            playRound();
+
+                if (result.includes('Win')){ 
+    
+                    win += 1;
+
+                } else {
+
+                    loss += 1
+
+                }
+
+                if (win > loss){
+
+                    alert('You won the game and beat the computer!')
+
+                } else {
+
+                    alert('You lost the game and the computer beat you!')
+                }   
 
         }
-
 
     </script>
 </body>
