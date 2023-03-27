@@ -19,12 +19,45 @@
         }
 
 
+        function playRound(playerSelection, computerSelection){
+
+            
+            playerSelection = prompt().toLowerCase();
+
+            computerSelection = getComputerChoice().toLowerCase();
 
 
+            if (playerSelection === 'rock' && computerSelection === 'scissors'){
 
+                alert ('You Win! Rock beats Scissors');
 
+            } else if (playerSelection === 'scissors' && computerSelection === 'rock'){
 
+            alert ('You Lose! Rock beats Scissors');
 
+            } else if (playerSelection === 'paper' && computerSelection === 'scissors'){
+
+                alert ('You Lose! Scissors beat Paper');
+
+            } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
+
+                alert ('You Win! Scissors beat Paper');
+
+            } else if (playerSelection === 'rock' && computerSelection === 'paper'){
+
+                alert ('You Lose! Paper beats Rock');
+
+            } else if (playerSelection === 'paper' && computerSelection === 'rock'){
+
+                alert ('You Win! Paper beats Rock');
+            } else {
+
+                alert ('Tie');
+            }
+
+            return playerSelection, computerSelection;
+
+        }
 
 
     </script>
